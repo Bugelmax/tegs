@@ -10,7 +10,7 @@
     
     <input type="text" name="" class="myTegs" />
     <div>
-        <p class="showTeg"></p>
+        
     </div>
     
     
@@ -19,22 +19,21 @@
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
   
-     <script>
-        // $(document).ready(function(){
-        //     $('.myTegs').keyup(function(){
-        //       $('.showTeg').text($('.myTegs').val());
-        //     });
-        // })
-    </script>
-    
     <script>
+        // $(document).ready(function() {
+        //     $('.myTegs').keydown(function(e) {
+        //         if(e.keyCode === 13) {
+        //             $('div').append($('.showTeg').text($('.myTegs').val()));
+        //         }
+        //     });
+        // });
+        
         $(document).ready(function() {
-          $('.myTegs').keydown(function(e) {
-             if(e.keyCode === 13) {
-                // $('p').text($('.myTegs').val());
-                $('div').append('<p></p>').text($('.myTegs').val());
-            }
-          });
+            $('.myTegs').keydown(function(e) {
+                if(e.keyCode === 13) {
+                    $('div').append('<p class="showTags">'+$(this).val()+'</p>');
+                }
+            });
         });
     </script>
 </body>
